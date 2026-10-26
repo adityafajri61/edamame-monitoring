@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f32">
+  <meta name="description" content="ASM Farm Monitoring — aplikasi operasional budidaya edamame.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>ASM Farm Monitoring — Edamame</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">ASM</div><div><strong>ASM FARM</strong><span>MONITORING · EDAMAME</span></div></div>
+      <div class="workspace-label">RUANG KERJA</div>
+      <nav id="main-nav" aria-label="Navigasi utama"></nav>
+      <div class="sidebar-bottom">
+        <div class="local-status"><span class="status-dot"></span><div><b id="save-label">Tersimpan di perangkat</b><small>Mode lokal · tanpa akun</small></div></div>
+        <button class="profile-button" id="profile-button"><span class="avatar">AF</span><span><b>Admin ASM</b><small>Administrator</small></span><span class="chevron">⌄</span></button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="menu-toggle" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb"><span>Operasional</span><b>/</b><strong id="page-heading">Dashboard</strong></div>
+        <div class="top-actions">
+          <div class="date-chip"><span class="tiny-icon">◷</span><span id="top-date"></span></div>
+          <button class="icon-button notification-button" id="notifications-button" aria-label="Lihat pengingat">♧<i id="notification-dot"></i></button>
+          <button class="button button-primary top-add" id="quick-add">＋ <span>Tambah data</span></button>
+        </div>
+      </header>
+      <section id="page-content" class="page-content" tabindex="-1"></section>
+      <footer class="app-footer"><span>ASM FARM MONITORING</span><span>Data lokal tersimpan di browser ini</span><button id="footer-help">Petunjuk penggunaan</button></footer>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <div id="mobile-scrim" class="mobile-scrim"></div>
+  <script src="app.js"></script>
+</body>
+</html>
